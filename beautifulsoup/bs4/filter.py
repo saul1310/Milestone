@@ -40,6 +40,39 @@ from bs4._typing import (
 )
 
 
+class SoupReplacer:
+    """
+    A class to replace specific HTML tags with alternative tags during parsing.
+    Similar to SoupStrainer but focused on tag replacement rather than filtering.
+    """
+    
+    def __init__(self, original_tag: str, replacement_tag: str):
+        """
+        Initialize a SoupReplacer with original and replacement tag names.
+        
+        Args:
+            original_tag (str): The HTML tag to be replaced (e.g., 'b')
+            replacement_tag (str): The replacement tag (e.g., 'strong')
+        """
+        self.original_tag = original_tag
+        self.replacement_tag = replacement_tag
+
+    def replace_if_needed(self, tag_name: str) -> str:
+        """
+        Check if a tag should be replaced and return the appropriate tag name.
+        
+        Args:
+            tag_name (str): The name of the tag to check
+            
+        Returns:
+            str: Either the replacement tag name or the original tag name
+        """
+        return self.replacement_tag if tag_name == self.original_tag else tag_name
+
+    def __repr__(self) -> str:
+        return f"SoupReplacer(original_tag='{self.original_tag}', replacement_tag='{self.replacement_tag}')"
+
+
 class ElementFilter(object):
     """`ElementFilter` encapsulates the logic necessary to decide:
 

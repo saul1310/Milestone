@@ -33,6 +33,7 @@ __all__ = [
     "Tag",
     "TemplateString",
     "ElementFilter",
+    "SoupReplacer",
     "UnicodeDammit",
     "CData",
     "Doctype",
@@ -71,6 +72,7 @@ from .css import CSS
 from ._deprecation import (
     _deprecated,
 )
+from .filter import SoupReplacer
 from .element import (
     CData,
     Comment,

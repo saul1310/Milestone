@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comprehensive BeautifulSoup Test Page</title>
+    <meta id="description" content="Test page for BeautifulSoup features">
+</head>
+<body>
+    <!-- Navigation with links for task2 -->
+    <nav id="main-nav">
+        <a href="https://www.example.com">Home</a>
+        <a href="https://blog.example.com" id="blog-link">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a>Invalid Link</a>
+        <a href="#top" class="top-link">Top</a>
+    </nav>
+
+    <!-- Content sections with various tags for task3 -->
+    <div class="section" id="introduction">
+        <h1>Welcome to Test Page</h1>
+        <p>This is a <b>test</b> paragraph with <i>different</i> tags.</p>
+        <p>Another <strong>bold</strong> and <em>emphasized</em> text.</p>
+    </div>
+
+    <!-- Elements with IDs for task4 -->
+    <div id="main-content">
+        <article id="article-1">
+            <h2 id="article-title">Article Title</h2>
+            <p id="article-intro">Article introduction text.</p>
+        </article>
+    </div>
+
+    <!-- Test cases for SoupReplacer -->
+    <div class="replacer-test">
+        <b>This should become strong</b>
+        <p>This has a <b>bold word</b> in it</p>
+        <i>This should become em</i>
+        <div>
+            <b>Nested <i>formatting</i> test</b>
+        </div>
+    </div>
+
+    <!-- Mixed content section -->
+    <section id="mixed-content">
+        <h3>Mixed Content</h3>
+        <ul>
+            <li id="item-1"><b>Bold</b> and <i>italic</i> text</li>
+            <li id="item-2"><a href="test.html">Test link</a></li>
+            <li id="item-3">Regular text</li>
+        </ul>
+    </section>
+
+    <footer id="page-footer">
+        <p>Footer content</p>
+        <a href="#top" id="back-to-top">Back to Top</a>
+    </footer>
+</body>
+</html>
